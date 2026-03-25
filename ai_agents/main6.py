@@ -27,10 +27,10 @@ def get_mandi_price(query: str) -> str:
 
         df = tables[0]
         summary = df.head(5).to_string(index=False)
-        return f"Source: {target_url}\n\nLatest Mandi Rates:\n{summary}"
+        return f"Source: {target_url}\n\nLatest Mandi Rates:{summary}"
 
     except Exception as e:
-        return f"Could not retrieve Mandi data: {str(e)}"
+        return f"Could not retrieve Mandi data"
 
 
 @tool
